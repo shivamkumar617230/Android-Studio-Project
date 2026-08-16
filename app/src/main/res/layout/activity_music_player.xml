@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d"
+    tools:context=".MusicPlayer">
+
+    <Button
+        android:id="@+id/button59"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginBottom="217dp"
+        android:backgroundTint="#621919"
+        android:text="BACK" />
+
+    <Button
+        android:id="@+id/button58"
+        android:layout_width="256dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="366dp"
+        android:backgroundTint="#2D8C6F"
+        android:text="PAUSE" />
+
+    <Button
+        android:id="@+id/button55"
+        android:layout_width="256dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="228dp"
+        android:backgroundTint="#2D8C6F"
+        android:text="PLAY" />
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/e"
+    tools:context=".ApplicationService">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText2"
+        android:layout_width="359dp"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="23dp"
+        android:text="                  APPLICATION SERVICES" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="43dp"
+        android:backgroundTint="#621919"
+        android:text="BACK" />
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="530dp"
+        android:backgroundTint="#9C37445D"
+        android:text="CALCULATOR" />
+
+    <Button
+        android:id="@+id/button34"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="449dp"
+        android:backgroundTint="#9C37445D"
+        android:text="MUSIC PLAYER" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="361dp"
+        android:backgroundTint="#9C37445D"
+        android:text="VIDEO CAMERA" />
+
+    <Button
+        android:id="@+id/button36"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="280dp"
+        android:backgroundTint="#9C37445D"
+        android:text="PHOTO CAMERA" />
+
+    <Button
+        android:id="@+id/button37"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="194dp"
+        android:backgroundTint="#9C37445D"
+        android:text="WEB BROWSER" />
+
+    <Button
+        android:id="@+id/button38"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="113dp"
+        android:backgroundTint="#9C37445D"
+        android:text="QUIZ" />
+</RelativeLayout>

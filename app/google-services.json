@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "51342536011",
+    "project_id": "controlx-658e1",
+    "storage_bucket": "controlx-658e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51342536011:android:55d49b64f270adff3c4cce",
+        "android_client_info": {
+          "package_name": "com.example.controlx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRh0ckbhysGtowIVfxzrx-WYjAokRevOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

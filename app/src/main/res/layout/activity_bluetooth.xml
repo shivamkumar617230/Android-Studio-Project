@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/f"
+    tools:context=".Bluetooth">
+
+    <Button
+        android:id="@+id/button67"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="43dp"
+        android:backgroundTint="#621919"
+        android:text="BACK" />
+
+    <Button
+        android:id="@+id/button63"
+        android:layout_width="325dp"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="208dp"
+        android:text="BLUETOOTH ON" />
+
+    <Button
+        android:id="@+id/button66"
+        android:layout_width="304dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="206dp"
+        android:text="BLUETOOTH OFF" />
+</RelativeLayout>

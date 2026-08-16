@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ControlX - Next-Gen Android Control & Sensor Matrix</title>
+  <meta name="description" content="ControlX is an all-in-one Android utility suite featuring 32 integrated modules: hardware controls, sensor analytics, media players, quiz arena, and dual cloud/offline authentication.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="bg-mesh">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-icon">
+          <span>⚡</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Control<span class="gradient-text">X</span></span>
+          <span class="brand-badge">PROD v1.0.0</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#download" class="nav-link">Download</a>
+        <a href="#api" class="nav-link">REST API</a>
+        <a href="#deploy" class="nav-link">Deploy to Render</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="status-pill" id="server-status-pill">
+          <span class="status-dot"></span>
+          <span id="status-text">Production Live</span>
+        </div>
+        <a href="/download/apk" class="btn btn-primary btn-sm">
+          <span>Download APK</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-pulse"></span>
+          <span>Official Production Release Ready</span>
+        </div>
+
+        <h1 class="hero-title">
+          The Ultimate <br>
+          <span class="gradient-text">Android Control</span> <br>
+          &amp; Sensor Matrix
+        </h1>
+
+        <p class="hero-description">
+          An all-in-one native Android powerhouse packed with <strong>32 integrated modules</strong>. Control hardware peripherals, analyze real-time sensor streams, launch interactive multimedia, test knowledge in the quiz arena, and synchronize seamlessly with Firebase Cloud or offline SQLite.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="/download/apk" class="btn btn-primary btn-lg download-btn" id="hero-download-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <div class="btn-text-group">
+              <span class="btn-title">Download Release APK</span>
+              <span class="btn-subtitle" id="hero-apk-meta">v1.0.0 • 18.7 MB • Signed Production</span>
+            </div>
+          </a>
+
+          <a href="#features" class="btn btn-glass btn-lg">
+            <span>Explore 32 Modules</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-value">32</span>
+            <span class="stat-label">Native Activities</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">API 24-36</span>
+            <span class="stat-label">Android 7.0 - 16 Support</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Render Cloud Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Mobile Mockup -->
+      <div class="hero-visual">
+        <div class="phone-frame">
+          <div class="phone-speaker"></div>
+          <div class="phone-camera"></div>
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="time" id="mock-time">12:00</span>
+              <div class="icons">
+                <span>📶</span>
+                <span>🔋 100%</span>
+              </div>
+            </div>
+
+            <div class="mock-app-content">
+              <div class="app-brand-badge">
+                <span>⚡ CONTROLX</span>
+              </div>
+              <div class="mock-grid">
+                <div class="mock-tile tile-torch active">
+                  <span class="tile-icon">🔦</span>
+                  <span class="tile-label">Torch</span>
+                  <span class="tile-status">Active</span>
+                </div>
+                <div class="mock-tile tile-sensor">
+                  <span class="tile-icon">💡</span>
+                  <span class="tile-label">Light Sensor</span>
+                  <span class="tile-status" id="mock-lux">420 Lux</span>
+                </div>
+                <div class="mock-tile tile-accel">
+                  <span class="tile-icon">🧭</span>
+                  <span class="tile-label">Gravity / Accel</span>
+                  <span class="tile-status">9.81 m/s²</span>
+                </div>
+                <div class="mock-tile tile-bt">
+                  <span class="tile-icon">📡</span>
+                  <span class="tile-label">Bluetooth Hub</span>
+                  <span class="tile-status">Ready</span>
+                </div>
+                <div class="mock-tile tile-media">
+                  <span class="tile-icon">🎵</span>
+                  <span class="tile-label">Music &amp; Video</span>
+                  <span class="tile-status">Playing</span>
+                </div>
+                <div class="mock-tile tile-quiz">
+                  <span class="tile-icon">🎯</span>
+                  <span class="tile-label">Quiz Arena</span>
+                  <span class="tile-status">Level 4</span>
+                </div>
+              </div>
+
+              <div class="mock-footer-card">
+                <div class="mock-auth-info">
+                  <span class="auth-icon">🛡️</span>
+                  <div>
+                    <div class="auth-title">Firebase Cloud &amp; Offline SQLite</div>
+                    <div class="auth-sub">Dual Authentication Active</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Feature Matrix Tabs Section -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge">Core Capabilities</span>
+        <h2 class="section-title">Engineered with <span class="gradient-text">32 Integrated Modules</span></h2>
+        <p class="section-subtitle">Categorized breakdown of hardware integration, sensor intelligence, media engines, and secure cloud synchronization.</p>
+      </div>
+
+      <div class="tab-container">
+        <div class="tab-buttons" id="feature-tabs">
+          <button class="tab-btn active" data-tab="hardware">
+            <span>⚙️ Hardware Controllers</span>
+          </button>
+          <button class="tab-btn" data-tab="sensors">
+            <span>📡 Sensor Analytics</span>
+          </button>
+          <button class="tab-btn" data-tab="media">
+            <span>🎬 Media &amp; Utilities</span>
+          </button>
+          <button class="tab-btn" data-tab="quiz">
+            <span>🎯 Quiz Engine</span>
+          </button>
+          <button class="tab-btn" data-tab="auth">
+            <span>🔐 Dual Auth &amp; Cloud</span>
+          </button>
+        </div>
+
+        <div class="tab-content active" id="tab-hardware">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔦</div>
+              <h3>Torch / Flashlight</h3>
+              <p>Direct hardware Camera2 torch mode control with real-time toggle feedback and safety exception fallback.</p>
+              <div class="feature-pill">Camera2 API</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📶</div>
+              <h3>Bluetooth Manager</h3>
+              <p>Manage Bluetooth adapters, request user authorization, and handle Android 12+ <code>BLUETOOTH_CONNECT</code> permissions.</p>
+              <div class="feature-pill">BluetoothAdapter</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📡</div>
+              <h3>Wi-Fi Controller</h3>
+              <p>Instant Wi-Fi system toggle, network state monitoring, and direct system settings deep-linking.</p>
+              <div class="feature-pill">WifiManager</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📳</div>
+              <h3>Haptic Vibrator</h3>
+              <p>Hardware vibration motor excitation with custom millisecond pulse durations and haptic feedback.</p>
+              <div class="feature-pill">Vibrator Service</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📞</div>
+              <h3>Direct Dialer</h3>
+              <p>Integrated telephone dialer with dynamic Android runtime permission validation.</p>
+              <div class="feature-pill">Telephony API</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-sensors">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">💡</div>
+              <h3>Ambient Light Sensor</h3>
+              <p>Monitors ambient lux values in real-time, displaying live illumination intensity and UI responsiveness.</p>
+              <div class="feature-pill">TYPE_LIGHT</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>3-Axis Accelerometer</h3>
+              <p>Calculates dynamic acceleration across X, Y, and Z vectors to detect motion, tilts, and physical shakes.</p>
+              <div class="feature-pill">TYPE_ACCELEROMETER</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌍</div>
+              <h3>Gravity Vector Sensor</h3>
+              <p>Analyzes continuous gravitational pull vectors to determine precise device orientation in space.</p>
+              <div class="feature-pill">TYPE_GRAVITY</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎶</div>
+              <h3>Sensor-Driven Music</h3>
+              <p>Dynamic audio playback engine automatically triggered and modulated by sensor input thresholds.</p>
+              <div class="feature-pill">Interactive Sensor Audio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-media">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎧</div>
+              <h3>Embedded Music Player</h3>
+              <p>Custom audio playback controller with play, pause, seek, and raw audio streaming capabilities.</p>
+              <div class="feature-pill">MediaPlayer</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📺</div>
+              <h3>Video Player</h3>
+              <p>Hardware-accelerated video rendering interface with playback controls and surface view management.</p>
+              <div class="feature-pill">VideoView</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌐</div>
+              <h3>In-App Web Browser</h3>
+              <p>Sandboxed full-featured WebView browser with custom URL loading and history navigation.</p>
+              <div class="feature-pill">WebView Engine</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📷</div>
+              <h3>Camera &amp; Photo Capture</h3>
+              <p>High-resolution photo capture intent integration with instant bitmap preview and local storage.</p>
+              <div class="feature-pill">Camera Capture</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🧮</div>
+              <h3>Scientific Calculator</h3>
+              <p>Precision arithmetic calculator for rapid mathematical operations directly inside the application.</p>
+              <div class="feature-pill">Calculator Engine</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-quiz">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>4-Tier Quiz Challenge</h3>
+              <p>Multi-stage interactive quiz arena (Quiz 1 through Quiz 4) with question branching and dynamic score evaluation.</p>
+              <div class="feature-pill">4 Complete Stages</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🏆</div>
+              <h3>Score &amp; Accuracy Tracking</h3>
+              <p>Real-time question validation, instant answer feedback, and cumulative performance scoring.</p>
+              <div class="feature-pill">Live Feedback</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-auth">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔥</div>
+              <h3>Firebase Cloud Auth</h3>
+              <p>Full online user registration and authentication backed by Google Firebase Authentication services.</p>
+              <div class="feature-pill">Firebase Auth SDK</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">☁️</div>
+              <h3>Realtime Database Sync</h3>
+              <p>Cloud synchronization of user personal information, preferences, and state in Firebase Realtime Database.</p>
+              <div class="feature-pill">Firebase Realtime DB</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💾</div>
+              <h3>Offline SQLite Storage</h3>
+              <p>Embedded SQLite local database allowing registration and authentication even without internet connectivity.</p>
+              <div class="feature-pill">SQLite Database</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Verification Section -->
+  <section class="section download-section" id="download">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-grid">
+          <div class="download-info">
+            <span class="section-badge">Direct Distribution</span>
+            <h2 class="download-title">Download Production <span class="gradient-text">ControlX APK</span></h2>
+            <p class="download-desc">
+              Get the official, signed, production-ready binary. Install directly on any Android device running Android 7.0 (API 24) through Android 16 (API 36).
+            </p>
+
+            <div class="apk-details-table">
+              <div class="table-row">
+                <span class="table-label">Package Name</span>
+                <span class="table-value font-mono">com.example.controlx</span>
+              </div>
+              <div class="table-row">
+                <span class="table-label">Version</span>
+                <span class="table-value" id="table-version">1.0.0 (Build 1)</span>
+              </div>
+              <div class="table-row">
+                <span class="table-label">File Size</span>
+                <span class="table-value" id="table-size">18.78 MB</span>
+              </div>
+              <div class="table-row">
+                <span class="table-label">Min OS Support</span>
+                <span class="table-value">Android 7.0+ (Nougat, API 24)</span>
+              </div>
+              <div class="table-row">
+                <span class="table-label">Target OS</span>
+                <span class="table-value">Android 15 / 16 (API 36)</span>
+              </div>
+              <div class="table-row">
+                <span class="table-label">SHA-256 Checksum</span>
+                <span class="table-value font-mono checksum-value" id="table-sha">981f572c2fe29cb083ae6b3d678e860d34e913c00f019c34c337a5d9b143c0a8</span>
+              </div>
+            </div>
+
+            <div class="download-btn-wrapper">
+              <a href="/download/apk" class="btn btn-primary btn-lg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download ControlX-release.apk</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="download-qr-box">
+            <div class="qr-card">
+              <div class="qr-header">
+                <span>📱 Scan to Download</span>
+              </div>
+              <!-- Generated high-contrast SVG QR Code -->
+              <div class="qr-canvas-wrapper" id="qr-container">
+                <svg class="qr-code-svg" viewBox="0 0 200 200">
+                  <rect width="200" height="200" fill="#ffffff" rx="12"/>
+                  <!-- Position Markers -->
+                  <rect x="20" y="20" width="40" height="40" fill="#0f172a" rx="4"/>
+                  <rect x="28" y="28" width="24" height="24" fill="#ffffff" rx="2"/>
+                  <rect x="34" y="34" width="12" height="12" fill="#0f172a"/>
+                  
+                  <rect x="140" y="20" width="40" height="40" fill="#0f172a" rx="4"/>
+                  <rect x="148" y="28" width="24" height="24" fill="#ffffff" rx="2"/>
+                  <rect x="154" y="34" width="12" height="12" fill="#0f172a"/>
+                  
+                  <rect x="20" y="140" width="40" height="40" fill="#0f172a" rx="4"/>
+                  <rect x="28" y="148" width="24" height="24" fill="#ffffff" rx="2"/>
+                  <rect x="34" y="154" width="12" height="12" fill="#0f172a"/>
+
+                  <!-- Data Dots Matrix -->
+                  <rect x="70" y="25" width="8" height="8" fill="#0f172a"/>
+                  <rect x="85" y="25" width="8" height="8" fill="#0f172a"/>
+                  <rect x="100" y="25" width="8" height="8" fill="#0f172a"/>
+                  <rect x="115" y="25" width="8" height="8" fill="#0f172a"/>
+                  <rect x="75" y="40" width="8" height="8" fill="#0f172a"/>
+                  <rect x="95" y="40" width="8" height="8" fill="#0f172a"/>
+                  <rect x="110" y="40" width="8" height="8" fill="#0f172a"/>
+
+                  <rect x="25" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="40" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="55" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="70" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="85" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="100" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="115" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="135" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="155" y="75" width="8" height="8" fill="#0f172a"/>
+                  <rect x="170" y="75" width="8" height="8" fill="#0f172a"/>
+
+                  <rect x="75" y="95" width="50" height="12" fill="#0f172a" rx="3"/>
+                  <text x="100" y="104" font-family="Outfit, sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">CONTROLX</text>
+
+                  <rect x="25" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="45" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="65" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="85" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="105" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="125" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="145" y="115" width="8" height="8" fill="#0f172a"/>
+                  <rect x="165" y="115" width="8" height="8" fill="#0f172a"/>
+
+                  <rect x="70" y="145" width="8" height="8" fill="#0f172a"/>
+                  <rect x="90" y="145" width="8" height="8" fill="#0f172a"/>
+                  <rect x="110" y="145" width="8" height="8" fill="#0f172a"/>
+                  <rect x="130" y="145" width="8" height="8" fill="#0f172a"/>
+                  <rect x="150" y="145" width="8" height="8" fill="#0f172a"/>
+                  <rect x="170" y="145" width="8" height="8" fill="#0f172a"/>
+
+                  <rect x="80" y="165" width="8" height="8" fill="#0f172a"/>
+                  <rect x="100" y="165" width="8" height="8" fill="#0f172a"/>
+                  <rect x="120" y="165" width="8" height="8" fill="#0f172a"/>
+                  <rect x="140" y="165" width="8" height="8" fill="#0f172a"/>
+                  <rect x="160" y="165" width="8" height="8" fill="#0f172a"/>
+                </svg>
+              </div>
+              <span class="qr-footer">Scan with phone camera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REST API Documentation -->
+  <section class="section api-section" id="api">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge">Live Microservice</span>
+        <h2 class="section-title">Built-in <span class="gradient-text">REST API Endpoints</span></h2>
+        <p class="section-subtitle">Integrate ControlX telemetry, distribution metadata, and health probes into your cloud infrastructure.</p>
+      </div>
+
+      <div class="api-grid">
+        <div class="api-card">
+          <div class="api-header">
+            <span class="http-method get">GET</span>
+            <span class="api-endpoint">/api/health</span>
+          </div>
+          <p class="api-desc">Render zero-downtime health probe returning service uptime and status.</p>
+          <pre class="api-code"><code>{
+  "status": "ok",
+  "uptime": 128.45,
+  "service": "ControlX Production Web Service",
+  "environment": "production"
+}</code></pre>
+        </div>
+
+        <div class="api-card">
+          <div class="api-header">
+            <span class="http-method get">GET</span>
+            <span class="api-endpoint">/api/app-info</span>
+          </div>
+          <p class="api-desc">Returns live release metadata, version, SHA-256, and package size.</p>
+          <pre class="api-code"><code>{
+  "appName": "ControlX",
+  "version": "1.0.0",
+  "minSdk": 24,
+  "targetSdk": 36,
+  "fileSize": "18.78 MB",
+  "sha256": "981f572c..."
+}</code></pre>
+        </div>
+
+        <div class="api-card">
+          <div class="api-header">
+            <span class="http-method get">GET</span>
+            <span class="api-endpoint">/download/apk</span>
+          </div>
+          <p class="api-desc">Streams the production release binary with attachment headers.</p>
+          <pre class="api-code"><code>HTTP/1.1 200 OK
+Content-Type: application/vnd.android.package-archive
+Content-Disposition: attachment; filename="ControlX-release.apk"</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Render Deployment Guide -->
+  <section class="section deploy-section" id="deploy">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge">1-Click Cloud Hosting</span>
+        <h2 class="section-title">How to Deploy on <span class="gradient-text">Render</span></h2>
+        <p class="section-subtitle">Deploy this entire project directly to Render in under 2 minutes using the pre-configured Blueprint.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Push to GitHub / GitLab</h3>
+          <p>Commit this project repository to your GitHub or GitLab account.</p>
+          <div class="code-pill font-mono">git push origin main</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Create Render Web Service</h3>
+          <p>On <a href="https://dashboard.render.com" target="_blank" rel="noopener">dashboard.render.com</a>, click <strong>New +</strong> &rarr; <strong>Blueprint</strong> or <strong>Web Service</strong>.</p>
+          <div class="code-pill">Connect your Repository</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Render Reads render.yaml</h3>
+          <p>Render automatically detects <span class="font-mono">render.yaml</span>, installs dependencies, and provisions your live URL.</p>
+          <div class="code-pill font-mono">https://controlx.onrender.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-icon"><span>⚡</span></div>
+        <span class="brand-name">Control<span class="gradient-text">X</span></span>
+        <p class="footer-tagline">Engineered for performance, utility, and modern mobile control.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Overview</a>
+        <a href="#features">32 Modules</a>
+        <a href="#download">Download APK</a>
+        <a href="/api/health" target="_blank">Health Status</a>
+        <a href="/api/app-info" target="_blank">Metadata API</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ControlX. Open Source under MIT License. Production Ready for Render.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

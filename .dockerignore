@@ -1,0 +1,10 @@
+.git
+.gradle
+.idea
+build
+app/build
+*.iml
+.DS_Store
+local.properties
+node_modules
+npm-debug.log

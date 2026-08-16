@@ -1,0 +1,21 @@
+# Render Blueprint for ControlX Production Web Portal & Distribution Service
+# Learn more: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: controlx-web-service
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: APP_NAME
+        value: ControlX
+      - key: APP_VERSION
+        value: 1.0.0
