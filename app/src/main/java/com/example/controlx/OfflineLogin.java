@@ -48,8 +48,8 @@ public class OfflineLogin extends AppCompatActivity {
                {
                    SQLiteDatabase Database= openOrCreateDatabase("OfflineDatabase",MODE_PRIVATE,null);
                    Database.execSQL("create table if not exists User(email varchar,password varchar)");
-                   String s3="Select* from User where (email='"+s1+"' and password='"+s2+"')";
-                   Cursor c1= Database.rawQuery(s3,null);
+                   String s3 = "SELECT * FROM User WHERE email=? AND password=?";
+                   Cursor c1 = Database.rawQuery(s3, new String[]{s1, s2});
                    if (c1.getCount()>0)
                    {
                        Toast.makeText(OfflineLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
