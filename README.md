@@ -12,8 +12,6 @@ ControlX is an Android app that provides quick controls for common phone feature
 > Note: Specific available features depend on the Android API level and device permissions.
 
 ## Screenshots
-Add the following screenshots to a `screenshots/` directory at the repository root and they'll appear here in the README. Filenames used below match the images you provided — replace them if you prefer different names.
-
 - screenshots/screen1.png — Application services / controls list
 - screenshots/screen2.png — Explore services / logout screen
 - screenshots/screen3.png — Welcome / onboarding screen
